@@ -189,14 +189,29 @@ body {
     display: block;
     text-decoration: none;
     line-height: 0;
+    padding: 8px 14px;
+    margin: -8px 0;
+    background: #faf9f7;
+    border-radius: 10px;
+    box-shadow: 
+        0 4px 24px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo);
+}
+
+.logo-link:hover {
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 107, 53, 0.2);
 }
 
 .logo-img {
-    height: 72px;
+    height: 80px;
     width: auto;
-    max-width: 320px;
+    max-width: 340px;
     object-fit: contain;
     object-position: left center;
+    display: block;
 }
 
 .main-nav {
@@ -792,7 +807,7 @@ body {
     }
     
     .logo-img {
-        height: 56px;
+        height: 64px;
     }
     
     .dashboard-grid {
