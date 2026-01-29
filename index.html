@@ -3,10 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Lamp for the Nations</title>
+    <title>Lamp for the Nations | Preparing Disciples For Ministry</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Content will be added later -->
+    <!-- Dark intro - Inverted Color Blast -->
+    <section class="hero-dark" id="hero-dark">
+        <div class="flame-container">
+            <div class="flame-icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 8C24 20 20 28 20 36C20 44 25 48 32 48C39 48 44 44 44 36C44 28 40 20 32 8Z" fill="url(#flame-gradient)"/>
+                    <path d="M32 16C28 24 26 30 26 36C26 40 28 44 32 44C36 44 38 40 38 36C38 30 36 24 32 16Z" fill="url(#flame-inner)"/>
+                    <defs>
+                        <linearGradient id="flame-gradient" x1="32" y1="8" x2="32" y2="48" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF6B35"/>
+                            <stop offset="0.5" stop-color="#F7931E"/>
+                            <stop offset="1" stop-color="#FFD23F"/>
+                        </linearGradient>
+                        <linearGradient id="flame-inner" x1="32" y1="16" x2="32" y2="44" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FFD23F"/>
+                            <stop offset="1" stop-color="#FF6B35"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <p class="hero-question">E.g. initial statement like "What if one student could reach an entire nation?"</p>
+            <a href="#welcome" class="cta-pulse">See How</a>
+        </div>
+        <div class="color-blast" aria-hidden="true"></div>
+    </section>
+
+    <!-- Header -->
+    <header class="main-header">
+        <a href="index.html" class="logo-link">
+            <img src="images/Logo.jpg" alt="Lamp for the Nations - Preparing Disciples For Ministry" class="logo-img">
+        </a>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="enroll.html">Enroll</a>
+            <a href="staff.html">Staff</a>
+            <a href="donate.html" class="nav-donate">Donate</a>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Impact Dashboard - Mission Control -->
+    <section class="impact-dashboard">
+        <div class="dashboard-grid">
+            <div class="counter-card" data-target="17">
+                <span class="counter-value">0</span>
+                <span class="counter-label">Leaders Trained</span>
+            </div>
+            <div class="counter-card" data-target="3">
+                <span class="counter-value">0</span>
+                <span class="counter-label">Nations Reached</span>
+            </div>
+            <div class="counter-card counter-infinite">
+                <span class="counter-value">∞</span>
+                <span class="counter-label">Potential Impact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section - Color erupts -->
+    <section class="welcome-section" id="welcome">
+        <h1 class="welcome-title">WELCOME</h1>
+        <h2 class="welcome-subtitle">Empowering Lives Through Gospel-Centered Education</h2>
+        <p class="welcome-intro">Welcome to Lamp For The Nations—a Bible-based college committed to equipping believers with the truth of the Gospel, empowering them to reach the nations and faithfully answer God's call to fulfill the Great Commission.</p>
+        
+        <div class="welcome-content">
+            <div class="photo-collage diagonal-left">
+                <img src="images/Zeshan teaching class in Urdu 1.jpg" alt="Students learning">
+                <img src="images/Zeshan teaching class in Urdu 2.jpg" alt="Classroom community">
+                <img src="images/Zeshan teaching class in Urdu 3.jpg" alt="Students studying">
+                <img src="images/Zeshan teaching class in Urdu 4.jpg" alt="Teaching in Urdu">
+            </div>
+            <div class="scripture-block diagonal-right">
+                <blockquote class="living-scripture">
+                    <span class="scripture-ref">Matthew 28:19-20</span>
+                    <p><span class="word-highlight">'19</span> Go therefore and make disciples of all the <span class="word-nations">nations</span>, baptizing them in the name of the Father and of the Son and of the Holy Spirit, <span class="word-highlight">20</span> teaching them to observe all things that I have commanded you; and lo, I am with you always, even to the end of the age.' Amen.</p>
+                </blockquote>
+                <a href="enroll.html" class="btn-enroll">Enroll Now for September 2020</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Map - Pakistan → Uganda → USA -->
+    <section class="journey-map-section">
+        <h2 class="section-title">Our Global Reach</h2>
+        <div class="journey-map">
+            <div class="map-visual">
+                <svg class="globe-paths" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Globe outline - visible earth circle -->
+                    <circle cx="200" cy="200" r="140" class="globe-outline"/>
+                    <!-- Latitude lines -->
+                    <ellipse cx="200" cy="200" rx="140" ry="35" class="globe-line"/>
+                    <ellipse cx="200" cy="200" rx="140" ry="70" class="globe-line"/>
+                    <ellipse cx="200" cy="200" rx="140" ry="105" class="globe-line"/>
+                    <ellipse cx="200" cy="200" rx="35" ry="140" class="globe-line"/>
+                    <ellipse cx="200" cy="200" rx="70" ry="140" class="globe-line"/>
+                    <ellipse cx="200" cy="200" rx="105" ry="140" class="globe-line"/>
+                    <!-- Connection paths between nations -->
+                    <path class="path-line path-1" d="M 95 120 Q 200 60 305 120" fill="none"/>
+                    <path class="path-line path-2" d="M 305 120 Q 200 200 180 280" fill="none"/>
+                    <path class="path-line path-3" d="M 180 280 Q 100 200 95 120" fill="none"/>
+                    <!-- Location markers -->
+                    <g class="location-dot" data-loc="pakistan">
+                        <circle cx="95" cy="120" r="14"/>
+                        <text x="95" y="100" text-anchor="middle">Pakistan</text>
+                    </g>
+                    <g class="location-dot" data-loc="uganda">
+                        <circle cx="305" cy="120" r="14"/>
+                        <text x="305" y="100" text-anchor="middle">Uganda</text>
+                    </g>
+                    <g class="location-dot" data-loc="usa">
+                        <circle cx="180" cy="280" r="14"/>
+                        <text x="180" y="305" text-anchor="middle">USA</text>
+                    </g>
+                </svg>
+            </div>
+            <div class="journey-stories">
+                <div class="story-card" data-loc="pakistan">
+                    <div class="story-image">
+                        <img src="images/Zeshan teaching class in Urdu 1.jpg" alt="Training in Pakistan">
+                    </div>
+                    <p>E.g. Pakistan Statement</p>
+                </div>
+                <div class="story-card" data-loc="uganda">
+                    <div class="story-image">
+                        <img src="images/Zeshan teaching class in Urdu 2.jpg" alt="Training in Uganda">
+                    </div>
+                    <p>E.g. Uganda Statement</p>
+                </div>
+                <div class="story-card" data-loc="usa">
+                    <div class="story-image">
+                        <img src="images/Zeshan teaching class in Urdu 3.jpg" alt="Training in the USA">
+                    </div>
+                    <p>E.g. US Statement</p>
+                </div>
+            </div>
+        </div>
+        <p class="impact-statement">Currently we train Christian leaders in Pakistan, Uganda and the United States. Our goal is to train up Christian leaders who are properly equipped with sound biblical doctrine, for the purpose of reaching, teaching, discipling and sharing the Gospel of Jesus Christ with the nations.</p>
+    </section>
+
+    <!-- Why Choose Us - Diagonal Chaos -->
+    <section class="why-choose-section">
+        <h2 class="section-title angled-title">Why Choose Lamp For The Nations?</h2>
+        <div class="why-content">
+            <div class="why-text-block diagonal-left">
+                <p>Our core beliefs and modern flexibility combine to create the perfect environment for you to become immersed in Scripture, enamored with Jesus, and equipped for the Church. Our staff is invested in our students and their goals.</p>
+                <a href="about.html" class="btn-discover">Discover More</a>
+            </div>
+            <div class="why-image diagonal-right">
+                <img src="images/Zeshan teaching class in Urdu 4.jpg" alt="Students in classroom">
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Programs -->
+    <section class="academics-section">
+        <div class="academics-content">
+            <div class="academics-image diagonal-left">
+                <img src="images/Zeshan teaching class in Urdu 3.jpg" alt="Bible study">
+            </div>
+            <div class="academics-text diagonal-right">
+                <h2>Academic Programs</h2>
+                <p>Lamp For The Nations offers a wide array of courses online. Whether you are a U.S. student looking to take one class or an International student trying to gain knowledge. We offer the flexibility you need to meet your goals.</p>
+                <a href="academics.html" class="btn-academics">Explore Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3C9 7 8 10 8 12C8 14 9 15 12 15C15 15 16 14 16 12C16 10 15 7 12 3Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <span>Lamp for the Nations</span>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:lfn@gmail.com">lfn@gmail.com</a>
+                <p>123 Main Street</p>
+                <p>Houston, TX 77070</p>
+            </div>
+            <div class="footer-copy">
+                © 2020 by L.F.Nations
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
