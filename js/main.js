@@ -1,2 +1,10 @@
-// Main JavaScript file for Lamp for the Nations
-// JavaScript will be added later
+// Lamp for the Nations – main JS
+
+(function () {
+  // Respect prefers-reduced-motion: don’t autoplay video in WELCOME
+  var video = document.querySelector(".hero-title-video");
+  if (video && window.matchMedia("(prefers-reduced-motion)").matches) {
+    video.removeAttribute("autoplay");
+    video.pause();
+  }
+})();

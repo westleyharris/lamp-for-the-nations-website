@@ -4,9 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Lamp for the Nations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <!-- Content will be added later -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Lamp for the Nations" class="logo-img">
+                
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="academics.html" class="nav-link">Academics</a>
+                <a href="enroll.html" class="nav-link">Enroll</a>
+                <a href="staff.html" class="nav-link">Staff</a>
+                <a href="donate.html" class="nav-link">Donate</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="hero-title" aria-label="WELCOME">
+                <span class="hero-title-inner">
+                    <video class="hero-title-video" autoplay muted loop playsinline preload="auto" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 120'%3E%3Crect fill='%23ff7f00' width='520' height='120'/%3E%3C/svg%3E" aria-hidden="true">
+                        <source src="video/welcome-bg.mp4" type="video/mp4">
+                        <!-- Fallback: Close-up flames and wood burning in fire pit — https://www.pexels.com/video/close-up-flames-and-wood-burning-in-fire-pit-35239445/ -->
+                        <source src="https://videos.pexels.com/video-files/35239445/35239445-hd_1280_720_25fps.mp4" type="video/mp4">
+                    </video>
+                    <svg class="hero-title-mask" viewBox="0 0 520 120" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <mask id="welcomeVideoMask">
+                                <rect width="520" height="120" fill="white"/>
+                                <text x="260" y="82" text-anchor="middle" font-family="Oswald, sans-serif" font-size="72" font-weight="700" letter-spacing="2" fill="black">WELCOME</text>
+                            </mask>
+                        </defs>
+                        <rect width="520" height="120" fill="var(--bg-dark)" mask="url(#welcomeVideoMask)"/>
+                    </svg>
+                </span>
+            </h1>
+            <h2 class="hero-subtitle">EMPOWERING LIVES THROUGH GOSPEL-CENTERED EDUCATION</h2>
+            <p class="hero-intro">
+                Welcome to Lamp For The Nations—a Bible-based college committed to equipping believers with the truth of the Gospel, empowering them to reach the nations and faithfully answer God's call to fulfill the Great Commission.
+            </p>
+        </section>
+
+        <section class="section scripture-section">
+            <div class="container two-col">
+                <div class="image-grid">
+                    <img src="images/collage_1.jpg" alt="">
+                    <img src="images/collage_2.jpg" alt="">
+                    <img src="images/collage_3.jpg" alt="">
+                    <img src="images/collage_4.jpg" alt="">
+                </div>
+                <div class="scripture-content">
+                    <p class="scripture-ref">Matthew 28:19-20</p>
+                    <p class="scripture-text">
+                        <sup>19</sup> Go therefore and make disciples of all the nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, <sup>20</sup> teaching them to observe all things that I have commanded you; and lo, I am with you always, even to the end of the age.” Amen.
+                    </p>
+                    <a href="enroll.html" class="btn btn-primary">Enroll Now for September 2020</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <hr class="section-divider">
+                <p class="mission-text">
+                    Currently we train Christian leaders in Pakistan, Uganda and the United States. Our goal is to train up Christian leaders who are properly equipped with sound biblical doctrine, for the purpose of reaching, teaching, discipling and sharing the Gospel of Jesus Christ with the nations.
+                </p>
+            </div>
+        </section>
+
+        <section class="section why-section">
+            <div class="container">
+                <h2 class="section-heading">WHY CHOOSE LAMP FOR THE NATIONS?</h2>
+                <div class="two-col">
+                    <div class="why-content-box">
+                        <p>
+                            Our core beliefs and modern flexibility combine to create the perfect environment for you to become immersed in Scripture, enamored with Jesus, and equipped for the Church. Our staff is invested in our students and their goals.
+                        </p>
+                        <a href="about.html" class="btn btn-primary">Discover More</a>
+                    </div>
+                    <div class="why-image">
+                        <img src="images/classroom.jpg" alt="Students in classroom">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section programs-section">
+            <div class="container two-col">
+                <div class="programs-image">
+                    <img src="images/prayer.png" alt="Hands on Bible">
+                </div>
+                <div class="programs-content">
+                    <h3 class="programs-heading">Academic Programs</h3>
+                    <p>
+                        Lamp For The Nations offers a wide array of courses online. Whether you are a U.S. student looking to take one class or an International student trying to gain knowledge. We offer the flexibility you need to meet your goals.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <hr class="section-divider">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-brand-row">
+                    <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="32" height="32" aria-hidden="true">
+                        <path fill="#ED682C" d="M94.041 176.602s-30.785-5.289-38.199-33.211c-7.264-27.357 3.696-42.898 14.737-55.352C81.62 75.584 103.77 58.819 94.041 23c0 0 44.34 24.564 26.567 89.282 0 0 13.096-10.317 11.225-29.076 0 0 15.189 24.172 14.653 47.731-.621 27.305-20.266 40.436-36.168 46.064 0 0 11.225-15.007-9.821-31.78-14.175-11.297-2.34-38.566-2.34-38.566s-41.16 25.324-4.116 69.947z"/>
+                    </svg>
+                    <span class="footer-name">Lamp For The Nations</span>
+                </div>
+                <p class="footer-contact">iftn.office@gmail.com</p>
+                <p class="footer-address">1205 Newsom Rd Mesquite, Tx 75149</p>
+            </div>
+            <p class="footer-copy">© 2025</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
