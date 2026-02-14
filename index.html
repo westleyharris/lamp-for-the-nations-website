@@ -13,8 +13,11 @@
     <header class="site-header">
         <div class="header-inner">
             <a href="index.html" class="logo">
-                <img src="images/logo.jpg" alt="Lamp for the Nations" class="logo-img">
-                
+                <img src="images/logo.jpg" alt="" class="logo-img">
+                <span class="logo-text">
+                    <span class="logo-title">LAMP FOR THE NATIONS</span>
+                    <span class="logo-tagline">Preparing Disciples for Ministry</span>
+                </span>
             </a>
             <nav class="main-nav">
                 <a href="index.html" class="nav-link active">Home</a>
@@ -28,29 +31,26 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h1 class="hero-title" aria-label="WELCOME">
-                <span class="hero-title-inner">
-                    <video class="hero-title-video" autoplay muted loop playsinline preload="auto" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 120'%3E%3Crect fill='%23ff7f00' width='520' height='120'/%3E%3C/svg%3E" aria-hidden="true">
-                        <source src="video/welcome-bg.mp4" type="video/mp4">
-                        <!-- Fallback: Close-up flames and wood burning in fire pit — https://www.pexels.com/video/close-up-flames-and-wood-burning-in-fire-pit-35239445/ -->
-                        <source src="https://videos.pexels.com/video-files/35239445/35239445-hd_1280_720_25fps.mp4" type="video/mp4">
-                    </video>
-                    <svg class="hero-title-mask" viewBox="0 0 520 120" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
-                        <defs>
-                            <mask id="welcomeVideoMask">
-                                <rect width="520" height="120" fill="white"/>
-                                <text x="260" y="82" text-anchor="middle" font-family="Oswald, sans-serif" font-size="72" font-weight="700" letter-spacing="2" fill="black">WELCOME</text>
-                            </mask>
-                        </defs>
-                        <rect width="520" height="120" fill="var(--bg-dark)" mask="url(#welcomeVideoMask)"/>
-                    </svg>
-                </span>
-            </h1>
-            <h2 class="hero-subtitle">EMPOWERING LIVES THROUGH GOSPEL-CENTERED EDUCATION</h2>
-            <p class="hero-intro">
-                Welcome to Lamp For The Nations—a Bible-based college committed to equipping believers with the truth of the Gospel, empowering them to reach the nations and faithfully answer God's call to fulfill the Great Commission.
-            </p>
+        <section class="hero" aria-label="Hero video">
+            <!-- Video background only – no text overlay -->
+            <div class="hero-video-wrap" aria-hidden="true">
+                <div class="hero-video-bg">
+                    <video class="hero-bg-video active" data-hero-clip muted playsinline preload="metadata"></video>
+                    <video class="hero-bg-video" data-hero-clip muted playsinline preload="metadata"></video>
+                    <video class="hero-bg-video" data-hero-clip muted playsinline preload="metadata"></video>
+                </div>
+                <div class="hero-video-overlay"></div>
+            </div>
+        </section>
+
+        <section class="section hero-welcome">
+            <div class="container container-narrow">
+                <h1 class="hero-welcome-title">WELCOME</h1>
+                <h2 class="hero-welcome-subtitle">EMPOWERING LIVES THROUGH GOSPEL-CENTERED EDUCATION</h2>
+                <p class="hero-welcome-intro">
+                    Welcome to Lamp For The Nations—a Bible-based college committed to equipping believers with the truth of the Gospel, empowering them to reach the nations and faithfully answer God's call to fulfill the Great Commission.
+                </p>
+            </div>
         </section>
 
         <section class="section scripture-section">
