@@ -1,6 +1,24 @@
 // Lamp for the Nations – main JS
 
 (function () {
+  // Mobile nav toggle
+  var navToggle = document.querySelector(".nav-toggle");
+  var mainNav = document.querySelector(".main-nav");
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", function () {
+      var open = mainNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open);
+      document.body.classList.toggle("nav-open", open);
+    });
+    mainNav.querySelectorAll(".nav-link").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-open");
+      });
+    });
+  }
+
   // Respect prefers-reduced-motion: don’t autoplay video in WELCOME
   var video = document.querySelector(".hero-title-video");
   if (video && window.matchMedia("(prefers-reduced-motion)").matches) {
