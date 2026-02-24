@@ -588,6 +588,19 @@ img {
     object-fit: cover;
 }
 
+/* Pamphlet-style hexagon frames (thin purple border) */
+.staff-photo-wrap.hex-image-wrap,
+.founder-photo-wrap.hex-image-wrap {
+    overflow: hidden;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    box-shadow: inset 0 0 0 3px var(--bg-dark);
+}
+
+.staff-photo-wrap.hex-image-wrap img,
+.founder-photo-wrap.hex-image-wrap img {
+    display: block;
+}
+
 .staff-name {
     font-family: Oswald, sans-serif;
     font-size: 1.1rem;
@@ -893,6 +906,7 @@ img {
     .founder-photo-wrap {
         clip-path: none;
         border-radius: 12px;
+        box-shadow: none;
     }
 
     .staff-bio {
