@@ -11,9 +11,13 @@
     --bg-section: #2f055d;
     --accent: #FF7F00;
     --accent-light: #c4a574;
+    --accent-gradient: linear-gradient(135deg, #ff9f40 0%, #FF7F00 50%, #e66b00 100%);
     --text: #ffffff;
     --text-muted: rgba(255, 255, 255, 0.85);
     --border-light: rgba(196, 165, 116, 0.6);
+    --cream: #f5f0e6;
+    --text-on-cream: #2d2a26;
+    --text-on-cream-muted: #5c564d;
 }
 
 body {
@@ -244,6 +248,30 @@ img {
     margin: 0 auto;
 }
 
+.section-cream .hero-welcome-intro {
+    color: var(--text-on-cream-muted);
+}
+
+.section-cream .hero-welcome-subtitle {
+    color: var(--text-on-cream);
+}
+
+/* Pamphlet: EQUIP EMPOWER SEND tagline */
+.hero-welcome-tagline {
+    font-family: Oswald, sans-serif;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 1.75rem;
+    line-height: 1.5;
+}
+
+.tagline-break {
+    display: block;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -263,15 +291,44 @@ img {
     margin: 0;
 }
 
-/* Scripture section - 4-panel collage */
+/* Pamphlet: scripture quote bar */
+.scripture-band {
+    background: linear-gradient(90deg, var(--bg-section) 0%, var(--bg-dark) 100%);
+    padding: 0.9rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.scripture-band-text {
+    font-family: Oswald, sans-serif;
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    font-weight: 500;
+    color: var(--text);
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+/* Scripture section - 4-panel with hexagonal frames (pamphlet) */
 .scripture-section .image-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 0.5rem;
-    min-height: 280px;
-    border-radius: 8px;
+    gap: 1rem;
+    min-height: 260px;
+}
+
+.scripture-section .image-grid.image-grid--hex .hex-wrap {
+    position: relative;
     overflow: hidden;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.scripture-section .image-grid.image-grid--hex .hex-wrap img {
+    width: 100%;
+    height: 100%;
+    min-height: 130px;
+    object-fit: cover;
+    display: block;
 }
 
 .scripture-section .image-grid img {
@@ -279,26 +336,6 @@ img {
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-.scripture-section .image-grid img:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.scripture-section .image-grid img:nth-child(2) {
-    grid-column: 2 / 4;
-    grid-row: 1;
-}
-
-.scripture-section .image-grid img:nth-child(3) {
-    grid-column: 1 / 3;
-    grid-row: 2;
-}
-
-.scripture-section .image-grid img:nth-child(4) {
-    grid-column: 3;
-    grid-row: 2;
 }
 
 .scripture-content {
@@ -419,6 +456,161 @@ img {
     font-size: 1.05rem;
     line-height: 1.75;
     color: var(--text);
+}
+
+/* Staff Page */
+.staff-hero {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.staff-page-title {
+    font-family: Oswald, sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 0;
+}
+
+.staff-section-heading {
+    font-family: Oswald, sans-serif;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.staff-section-heading--cream {
+    color: var(--text-on-cream);
+}
+
+/* Staff Intro Section */
+.staff-intro-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.staff-intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.staff-intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text);
+    margin: 0;
+}
+
+/* Vision Section (Cream) */
+.vision-section {
+    position: relative;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.vision-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.vision-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.founder-photo-wrap {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.founder-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founder-name {
+    font-family: Oswald, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-on-cream);
+    margin-bottom: 1rem;
+}
+
+.vision-text p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-on-cream-muted);
+    margin: 0;
+}
+
+/* Team Section - Staff Grid */
+.team-section {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.staff-member {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staff-photo-wrap {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.25rem;
+    flex-shrink: 0;
+}
+
+.staff-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.staff-name {
+    font-family: Oswald, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.staff-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.staff-bio {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+    max-width: 260px;
 }
 
 /* Footer */
@@ -593,6 +785,31 @@ img {
         margin-bottom: 1.75rem;
         font-size: clamp(1.2rem, 4vw, 1.5rem);
     }
+
+    /* Staff page responsive */
+    .staff-intro-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .staff-intro-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .vision-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .founder-photo-wrap {
+        margin: 0 auto;
+    }
+
+    .staff-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -644,6 +861,42 @@ img {
     .hero-welcome-intro {
         font-size: 0.95rem;
         text-align: left;
+    }
+
+    .hero-welcome-tagline {
+        font-size: 1.1rem;
+        letter-spacing: 0.06em;
+        margin-top: 1.5rem;
+    }
+
+    .scripture-band {
+        padding: 0.75rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .scripture-band-text {
+        font-size: 0.85rem;
+    }
+
+    /* Staff page mobile */
+    .staff-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .staff-photo-wrap {
+        width: 160px;
+        height: 160px;
+    }
+
+    .staff-photo-wrap,
+    .founder-photo-wrap {
+        clip-path: none;
+        border-radius: 12px;
+    }
+
+    .staff-bio {
+        max-width: 100%;
     }
 
     .container-narrow {
@@ -700,24 +953,10 @@ img {
         min-height: 0;
     }
 
-    .scripture-section .image-grid img:nth-child(1) {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .scripture-section .image-grid img:nth-child(2) {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .scripture-section .image-grid img:nth-child(3) {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .scripture-section .image-grid img:nth-child(4) {
-        grid-column: 2;
-        grid-row: 2;
+    /* Rounded corners instead of hexagons on small screens */
+    .scripture-section .image-grid.image-grid--hex .hex-wrap {
+        clip-path: none;
+        border-radius: 10px;
     }
 
     .scripture-content {
