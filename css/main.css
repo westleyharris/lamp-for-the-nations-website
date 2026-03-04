@@ -205,6 +205,10 @@ img {
     background-color: var(--bg-section);
 }
 
+.section-cream {
+    background-color: var(--cream);
+}
+
 /* Welcome section – below hero */
 .hero-welcome {
     padding-top: 3rem;
@@ -458,172 +462,941 @@ img {
     color: var(--text);
 }
 
-/* Staff Page */
-.staff-hero {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+/* ========== Staff Page ========== */
+
+/* Eyebrow label */
+.staff-eyebrow {
+    font-family: Oswald, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-align: center;
+    margin: 0 0 0.4rem;
+}
+
+.staff-eyebrow--light {
+    color: var(--accent);
+    opacity: 0.9;
 }
 
 .staff-page-title {
     font-family: Oswald, sans-serif;
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
-    color: var(--accent);
+    color: var(--text);
     letter-spacing: 0.05em;
     text-align: center;
-    margin: 0;
+    margin: 0 0 0.6rem;
+    line-height: 1.1;
 }
 
-.staff-section-heading {
-    font-family: Oswald, sans-serif;
-    font-size: clamp(1.25rem, 3vw, 1.5rem);
-    font-weight: 600;
-    color: var(--text);
-    letter-spacing: 0.03em;
-    margin-bottom: 1.5rem;
-}
-
-.staff-section-heading--cream {
-    color: var(--text-on-cream);
-}
-
-/* Staff Intro Section */
-.staff-intro-content {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
-    align-items: start;
-}
-
-.staff-intro-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-}
-
-.staff-intro-text p {
+.staff-page-subtitle {
     font-size: 1.05rem;
-    line-height: 1.75;
-    color: var(--text);
-    margin: 0;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 0 auto 2.5rem;
+    max-width: 540px;
+    line-height: 1.65;
 }
 
-/* Vision Section (Cream) */
-.vision-section {
-    position: relative;
-    padding-top: 3.5rem;
+/* Hero section */
+.staff-hero {
+    padding-top: 3rem;
     padding-bottom: 3.5rem;
 }
 
-.vision-section .container {
-    position: relative;
-    z-index: 1;
-}
-
-.vision-content {
+.staff-hero-body {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     align-items: start;
-}
-
-.founder-photo-wrap {
-    width: 200px;
-    height: 200px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
-.founder-photo-wrap img {
+/* Video column */
+.staff-hero-video-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-hero-video-wrap {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    background: var(--bg-section);
+    aspect-ratio: 16 / 9;
+    border: 2px solid rgba(255, 127, 0, 0.25);
+}
+
+.staff-hero-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.staff-hero-video-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 0.6rem 0 0;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+/* Text column */
+.staff-hero-text-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+    padding-top: 0.25rem;
+}
+
+.staff-mission-label {
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+
+.staff-mission-list {
+    margin: 0;
+    padding-left: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.staff-mission-list li {
+    font-size: 0.975rem;
+    line-height: 1.65;
+}
+
+.staff-hero-closing {
+    font-size: 0.975rem;
+    color: var(--accent-light);
+    font-style: italic;
+    margin-top: 0.25rem;
+}
+
+/* ========== Vision Card ========== */
+.vision-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.vision-card {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 6px 32px rgba(45, 42, 38, 0.1);
+    border: 1px solid rgba(196, 165, 116, 0.25);
+}
+
+.vision-card-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(45, 42, 38, 0.18);
+    border: 4px solid var(--bg-dark);
+}
+
+.vision-card-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-.founder-name {
+.vision-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.vision-card-tag {
+    display: inline-block;
     font-family: Oswald, sans-serif;
-    font-size: 1.25rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--bg-dark);
+    padding: 0.2rem 0.65rem;
+    border-radius: 4px;
+    margin-bottom: 0.3rem;
+    width: fit-content;
+}
+
+.vision-card-name {
+    font-family: Oswald, sans-serif;
+    font-size: 1.45rem;
     font-weight: 700;
     color: var(--text-on-cream);
-    margin-bottom: 1rem;
-}
-
-.vision-text p {
-    font-size: 1.05rem;
-    line-height: 1.75;
-    color: var(--text-on-cream-muted);
+    line-height: 1.2;
     margin: 0;
 }
 
-/* Team Section - Staff Grid */
+.vision-card-role {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #FF7F00;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.5rem;
+}
+
+.vision-card-quote {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-on-cream-muted);
+    margin: 0;
+    font-style: italic;
+    border-left: 3px solid var(--bg-dark);
+    padding-left: 1rem;
+}
+
+/* ========== Team Section ========== */
 .team-section {
-    padding-top: 3rem;
-    padding-bottom: 4rem;
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
 }
 
 .staff-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.75rem;
+    margin-top: 2.5rem;
 }
 
-.staff-member {
-    text-align: center;
+/* Staff Card */
+.staff-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 1.75rem 1.75rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.staff-photo-wrap {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 1.25rem;
+.staff-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 127, 0, 0.3);
+}
+
+/* Hexagon photo inside card */
+.staff-card-photo {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1.25rem;
     flex-shrink: 0;
 }
 
-.staff-photo-wrap img {
+.staff-card-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* Pamphlet-style hexagon frames (thin purple border) */
-.staff-photo-wrap.hex-image-wrap,
-.founder-photo-wrap.hex-image-wrap {
-    overflow: hidden;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    box-shadow: inset 0 0 0 3px var(--bg-dark);
-}
-
-.staff-photo-wrap.hex-image-wrap img,
-.founder-photo-wrap.hex-image-wrap img {
     display: block;
 }
 
-.staff-name {
+/* Hexagon clip */
+.hex-image-wrap {
+    overflow: hidden;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.staff-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.staff-card-name {
     font-family: Oswald, sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
+    line-height: 1.25;
+    margin: 0;
 }
 
-.staff-title {
-    font-size: 0.95rem;
-    font-weight: 500;
+.staff-card-role {
+    font-size: 0.8rem;
+    font-weight: 600;
     color: var(--accent);
-    margin-bottom: 0.75rem;
+    letter-spacing: 0.03em;
+    margin: 0 0 0.6rem;
+    text-transform: uppercase;
+}
+
+.staff-card-bio {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin: 0;
+    text-align: left;
+}
+
+/* ========== About Page ========== */
+
+.about-eyebrow {
+    font-family: Oswald, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-align: center;
+    margin: 0 0 0.4rem;
+}
+
+.about-eyebrow--light {
+    opacity: 0.9;
+}
+
+.about-page-title {
+    font-family: Oswald, sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.25rem);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin: 0 0 2.5rem;
+    line-height: 1.1;
+}
+
+/* ---- WHO WE ARE hero ---- */
+.about-hero {
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+}
+
+.about-hero-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: start;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.about-hero-image-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.about-hero-img-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 127, 0, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    aspect-ratio: 4 / 3;
+    background: var(--bg-section);
+}
+
+.about-hero-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-hero-img-caption {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-align: center;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.about-hero-text-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.about-inline-link {
+    color: var(--accent);
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.about-inline-link:hover {
+    opacity: 0.8;
+}
+
+/* Scripture pull-quote block */
+.about-scripture-block {
+    border-left: 3px solid var(--accent);
+    padding: 0.85rem 1.25rem;
+    background: rgba(255, 127, 0, 0.06);
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.about-scripture-ref {
+    font-family: Oswald, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+.about-scripture-text {
+    font-size: 0.975rem;
+    line-height: 1.75;
+    color: var(--text);
+    font-style: italic;
+    margin: 0;
+}
+
+.about-scripture-tagline {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0;
+}
+
+/* ---- OUR CORE BELIEFS ---- */
+.about-beliefs {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    background: var(--bg-section);
+}
+
+.about-beliefs-intro {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    max-width: 820px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+/* Core Values quick summary box */
+.core-values-summary {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 127, 0, 0.2);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    max-width: 680px;
+    margin: 0 auto 3.5rem;
+}
+
+.core-values-summary-title {
+    font-family: Oswald, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 1rem;
+}
+
+.core-values-ol {
+    margin: 0;
+    padding-left: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.core-values-ol li {
+    font-size: 0.975rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Core Values detail section */
+.core-values-detail {
+    margin-top: 0;
+}
+
+.core-values-detail-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.core-values-sub {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+}
+
+/* Belief cards grid */
+.belief-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.belief-card {
+    display: flex;
+    gap: 1.25rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.6rem 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.belief-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 127, 0, 0.3);
+}
+
+.belief-card-number {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-family: Oswald, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin-top: 0.1rem;
+    box-shadow: 0 2px 10px rgba(255, 127, 0, 0.35);
+}
+
+.belief-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+}
+
+.belief-card-title {
+    font-family: Oswald, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.belief-card-ref {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.belief-card-text {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ---- About responsive ---- */
+@media (max-width: 768px) {
+    .about-hero-body {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-hero-img-wrap {
+        aspect-ratio: 16 / 9;
+    }
+
+    .belief-cards {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .core-values-summary {
+        padding: 1.5rem 1.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero {
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .about-beliefs {
+        padding-top: 2.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .about-page-title {
+        margin-bottom: 1.75rem;
+    }
+
+    .belief-card {
+        padding: 1.25rem 1rem;
+        gap: 1rem;
+    }
+
+    .belief-card-number {
+        width: 32px;
+        height: 32px;
+        font-size: 0.88rem;
+    }
+}
+
+/* ========== Academics Page ========== */
+
+.acad-eyebrow {
+    font-family: Oswald, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-align: center;
+    margin: 0 0 0.4rem;
+}
+
+.acad-eyebrow--light {
+    opacity: 0.9;
+}
+
+.acad-page-title {
+    font-family: Oswald, sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.25rem);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin: 0 0 2.5rem;
+    line-height: 1.1;
+}
+
+/* ---- Hero ---- */
+.acad-hero {
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+}
+
+.acad-hero-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.acad-hero-video-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.acad-hero-video-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 127, 0, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    background: var(--bg-section);
+}
+
+.acad-hero-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.acad-hero-video-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-align: center;
+    font-style: italic;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.acad-hero-text-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.acad-hero-subtitle {
+    font-family: Oswald, sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.acad-hero-text-col p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ---- Schedule Section ---- */
+.acad-schedule {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    background: var(--bg-section);
+}
+
+.acad-schedule-notes {
+    max-width: 780px;
+    margin: 0 auto 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 127, 0, 0.18);
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+}
+
+.acad-schedule-notes p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Year block */
+.acad-year-block {
+    max-width: 900px;
+    margin: 0 auto 3.5rem;
+}
+
+.acad-year-block:last-child {
+    margin-bottom: 0;
+}
+
+.acad-year-title {
+    font-family: Oswald, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.03em;
+    margin: 0 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(255, 127, 0, 0.3);
+}
+
+.acad-year-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Oswald, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(255, 127, 0, 0.35);
+}
+
+.acad-year-badge--alt {
+    background: var(--bg-dark);
+    border: 1px solid rgba(255, 127, 0, 0.5);
+}
+
+/* Class list */
+.acad-class-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Individual class row */
+.acad-class-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.15s ease;
+}
+
+.acad-class-item:last-child {
+    border-bottom: none;
+}
+
+.acad-class-item:hover {
+    background: rgba(255, 127, 0, 0.05);
+}
+
+/* Break rows — more subtle */
+.acad-class-item--break {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.acad-class-item--break:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.acad-class-day-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.15rem;
+    padding: 1rem 1.25rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.acad-class-day {
+    font-family: Oswald, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.acad-class-item--break .acad-class-day {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    opacity: 0.6;
+}
+
+.acad-class-slot {
+    font-size: 0.73rem;
+    color: var(--text-muted);
+    opacity: 0.7;
     letter-spacing: 0.02em;
 }
 
-.staff-bio {
-    font-size: 0.9rem;
-    line-height: 1.6;
+.acad-class-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.9rem 1.25rem;
+}
+
+.acad-class-times {
+    font-size: 0.78rem;
     color: var(--text-muted);
+    opacity: 0.7;
     margin: 0;
-    max-width: 260px;
+    line-height: 1.5;
+}
+
+.acad-class-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+    line-height: 1.45;
+}
+
+/* ---- Academics responsive ---- */
+@media (max-width: 768px) {
+    .acad-hero-body {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .acad-class-item {
+        grid-template-columns: 110px 1fr;
+    }
+
+    .acad-year-title {
+        font-size: 1.1rem;
+    }
+
+    .acad-schedule-notes {
+        padding: 1.25rem 1.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .acad-hero {
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .acad-schedule {
+        padding-top: 2.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .acad-page-title {
+        margin-bottom: 1.75rem;
+    }
+
+    .acad-class-item {
+        grid-template-columns: 1fr;
+    }
+
+    .acad-class-day-wrap {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .acad-class-info {
+        padding: 0.75rem 1rem;
+    }
+
+    .acad-class-slot::before {
+        content: "·  ";
+    }
 }
 
 /* Footer */
@@ -800,28 +1573,33 @@ img {
     }
 
     /* Staff page responsive */
-    .staff-intro-content {
+    .staff-hero-body {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
-    .staff-intro-image {
-        max-width: 300px;
+    .vision-card {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+
+    .vision-card-photo {
         margin: 0 auto;
     }
 
-    .vision-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .vision-card-quote {
+        text-align: left;
     }
 
-    .founder-photo-wrap {
-        margin: 0 auto;
+    .vision-card-tag {
+        margin: 0 auto 0.3rem;
     }
 
     .staff-grid {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1.5rem;
     }
 }
 
@@ -892,25 +1670,36 @@ img {
     }
 
     /* Staff page mobile */
+    .staff-hero {
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .staff-hero-body {
+        gap: 1.75rem;
+    }
+
+    .staff-card {
+        padding: 1.5rem 1.25rem 1.25rem;
+    }
+
+    .staff-card-photo {
+        width: 120px;
+        height: 120px;
+    }
+
     .staff-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.25rem;
     }
 
-    .staff-photo-wrap {
+    .vision-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .vision-card-photo {
         width: 160px;
         height: 160px;
-    }
-
-    .staff-photo-wrap,
-    .founder-photo-wrap {
-        clip-path: none;
-        border-radius: 12px;
-        box-shadow: none;
-    }
-
-    .staff-bio {
-        max-width: 100%;
     }
 
     .container-narrow {
