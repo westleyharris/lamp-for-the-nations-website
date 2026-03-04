@@ -2309,6 +2309,75 @@ img {
     .footer-inner {
         max-width: 1320px;
     }
+
+    /* Staff page */
+    .staff-hero-body {
+        max-width: 1200px;
+        gap: 4rem;
+    }
+
+    .staff-hero-text-col {
+        font-size: 1.05rem;
+    }
+
+    .vision-card {
+        max-width: 1060px;
+        padding: 3rem 3.5rem;
+    }
+
+    .vision-card-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .staff-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+
+    /* About page */
+    .about-hero-body {
+        max-width: 1200px;
+        gap: 4rem;
+    }
+
+    .belief-cards {
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+        gap: 1.75rem;
+    }
+
+    /* Academics page */
+    .acad-hero-body {
+        max-width: 1200px;
+        gap: 4rem;
+    }
+
+    .acad-year-block {
+        max-width: 1060px;
+    }
+
+    .acad-schedule-notes {
+        max-width: 900px;
+    }
+
+    /* Enroll page */
+    .enroll-req-list {
+        max-width: 1060px;
+    }
+
+    .enroll-hero-centered {
+        max-width: 860px;
+    }
+
+    /* Donate page */
+    .donate-hero-body {
+        max-width: 1200px;
+        gap: 4rem;
+    }
+
+    .donate-partner-body {
+        max-width: 1060px;
+    }
 }
 
 @media (min-width: 1800px) {
@@ -2322,5 +2391,41 @@ img {
 
     .section {
         padding: 5rem 2rem;
+    }
+
+    /* Staff page */
+    .staff-hero-body {
+        max-width: 1320px;
+    }
+
+    .vision-card {
+        max-width: 1160px;
+    }
+
+    .staff-grid {
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    }
+
+    /* About page */
+    .about-hero-body {
+        max-width: 1320px;
+    }
+
+    /* Academics page */
+    .acad-hero-body {
+        max-width: 1320px;
+    }
+
+    .acad-year-block {
+        max-width: 1160px;
+    }
+
+    /* Donate page */
+    .donate-hero-body {
+        max-width: 1320px;
+    }
+
+    .donate-partner-body {
+        max-width: 1160px;
     }
 }
