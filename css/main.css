@@ -612,19 +612,13 @@ img {
 
 .vision-card-photo {
     width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
     flex-shrink: 0;
     margin: 0 auto;
-    box-shadow: 0 4px 20px rgba(45, 42, 38, 0.18);
-    border: 4px solid var(--bg-dark);
 }
 
 .vision-card-photo img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
 }
 
@@ -694,7 +688,6 @@ img {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: 14px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -712,22 +705,19 @@ img {
 /* Hexagon photo inside card */
 .staff-card-photo {
     width: 140px;
-    height: 140px;
     margin-bottom: 1.25rem;
     flex-shrink: 0;
 }
 
 .staff-card-photo img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
 }
 
 /* Hexagon clip */
 .hex-image-wrap {
     overflow: hidden;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .staff-card-body {
@@ -2557,7 +2547,6 @@ img {
 
     .vision-card-photo {
         width: 160px;
-        height: 160px;
     }
 
     .container-narrow {
@@ -2708,7 +2697,6 @@ img {
 
     .vision-card-photo {
         width: 220px;
-        height: 220px;
     }
 
     .staff-grid {
